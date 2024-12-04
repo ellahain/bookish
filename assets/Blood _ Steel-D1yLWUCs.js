@@ -1,0 +1,1 @@
+import{j as e,N as n,B as t}from"./index-Dp7_G4FW.js";function o(){return e.jsxs(e.Fragment,{children:[e.jsx(n,{}),e.jsx(t,{sx:{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",minHeight:"100vh"},children:e.jsx("h1",{style:{color:"white"},children:"Review Coming Soon!"})})]})}export{o as default};
