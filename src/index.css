@@ -23,7 +23,7 @@
   align-items: center;      /* Vertically centers the content */
   min-width: 320px;
   min-height: 100vh;
-  background-color: white;
+  background-color: #3c0522;
  }
  
  
@@ -44,11 +44,11 @@
  
  a {
   font-weight: 500;
-  color: #646cff;
+  color: #d2928a;
   text-decoration: inherit;
  }
  a:hover {
-  color: #535bf2;
+  color: #d2928a;
  }
  
  
@@ -79,7 +79,7 @@
   transition: border-color 0.25s;
  }
  button:hover {
-  border-color: #646cff;
+  border-color: #d2928a;
  }
  button:focus,
  button:focus-visible {
@@ -93,7 +93,7 @@
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #d2928a;
   }
   button {
     background-color: #f9f9f9;

@@ -3,52 +3,58 @@ import { AppBar, Toolbar, Tabs, Tab } from "@mui/material";
 import { Link, useLocation } from "react-router-dom"; // Import useLocation hook
 
 function Navbar() {
-  const [value, setValue] = useState(0); // State to manage active tab
   const location = useLocation(); // Hook to get the current route
+  const [value, setValue] = useState<number | null>(null); // Explicitly type as number | null
 
   useEffect(() => {
-    // Set the active tab based on the current path
-    if (location.pathname === "/") {
-      setValue(0); // Home tab
-    } else if (location.pathname === "/portfolio") {
-      setValue(1); // Portfolio tab
-    } else if (location.pathname === "/about") {
-      setValue(2); // About tab
+    const currentPath = location.pathname;
+
+    // Only set the value if it differs from the current state to avoid unnecessary re-renders
+    if (currentPath === "/bookish") {
+      if (value !== 0) {
+        setValue(0); // Home tab
+      }
+    } else if (currentPath.includes("/review")) {
+      if (value !== 1) {
+        setValue(1); // Reviews tab
+      }
     }
-  }, [location]); // Update when location changes
+  }, [location, value]); // Run effect only when location or value changes
+
+  // If the value is not set yet (i.e., initial render), don't render the Tabs yet
+  if (value === null) {
+    return null; // Or a loading state if needed
+  }
 
   return (
     <AppBar position="fixed" sx={{ top: 0, bgcolor: "black" }}>
       <Toolbar>
-        <Tabs value={value} textColor="inherit" indicatorColor="secondary">
+        <Tabs
+          value={value}
+          onChange={(_e, newValue) => setValue(newValue)} // Allow tab switching by click
+          textColor="inherit"
+          sx={{ "& .MuiTabs-indicator": { backgroundColor: "#d2928a" } }}
+        >
           <Tab
             label="Home"
             component={Link}
-            to="/" // Link to the home page
+            to="/bookish/" // Link to the home page
             sx={{
-              "&:hover": { backgroundColor: "transparent" },
-              "&:focus": { backgroundColor: "transparent" },
-              "&:focus-visible": { outline: "none" },
+              color: "white", // Normal text color
+              "&:hover": {
+                color: "#d2928a", // Hover text color
+              },
             }}
           />
           <Tab
-            label="Portfolio"
+            label="Reviews"
             component={Link}
-            to="/portfolio" // Link to the portfolio page
+            to="/bookish/reviews" // Link to the reviews page
             sx={{
-              "&:hover": { backgroundColor: "transparent" },
-              "&:focus": { backgroundColor: "transparent" },
-              "&:focus-visible": { outline: "none" },
-            }}
-          />
-          <Tab
-            label="About"
-            component={Link}
-            to="/about" // Link to the about page
-            sx={{
-              "&:hover": { backgroundColor: "transparent" },
-              "&:focus": { backgroundColor: "transparent" },
-              "&:focus-visible": { outline: "none" },
+              color: "white", // Normal text color
+              "&:hover": {
+                color: "#d2928a", // Hover text color
+              },
             }}
           />
         </Tabs>

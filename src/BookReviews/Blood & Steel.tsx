@@ -1,18 +1,15 @@
 //import React from "react";
-//import { Box } from "@mui/material";
+import { Box } from "@mui/material";
 //import Marquee from "react-fast-marquee";
-import logo from "/logo3.png";
-import ProgressBar from "./components/ProgressBar";
+import Navbar from "../components/Navbar";
 
 
-function Home() {
+
+function Blood() {
   return (
     <>
-      <div>
-      <img src={logo} alt="Logo" style={{ width: "50vw", height: "auto" }} />
-     </div>
-     <div><ProgressBar/></div>
-      {/*<Box
+    <Navbar/>
+      <Box
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -22,9 +19,10 @@ function Home() {
           //paddingTop: "64px", // To avoid overlap with fixed navbar
         }}
       >
-      </Box>*/}
+        <h1 style={{color: "white"}}>Review Coming Soon!</h1>
+      </Box>
     </>
   );
 }
 
-export default Home;
+export default Blood;
