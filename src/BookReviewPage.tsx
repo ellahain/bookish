@@ -4,7 +4,11 @@ import { useParams } from 'react-router-dom';
 // Dynamically import the book review components
 const reviews = {
   'Blood & Steel': lazy(() => import('./BookReviews/Blood & Steel')),
-  //'Phantasma': lazy(() => import('./Phantasma')),
+  'Phantasma': lazy(() => import('./BookReviews/Phantasma')),
+  'Zodiac Academy: Sorrow and Starlight': lazy(() => import('./BookReviews/Zodiac Academy: Sorrow and Starlight')),
+  'Zodiac Academy: Beyond the Veil': lazy(() => import('./BookReviews/Zodiac Academy: Beyond the Veil')),
+  'Zodiac Academy: Restless Stars': lazy(() => import('./BookReviews/Zodiac Academy: Restless Stars')),
+  'Half a Soul': lazy(() => import('./BookReviews/Half a Soul')),
   //'Flawless': lazy(() => import('./Flawless')), // Create this component too
   // Add more reviews here as necessary
 };

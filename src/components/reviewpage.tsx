@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';  // Import Link from react-router-dom
 export default function TitlebarBelowMasonryImageList() {
   return (
     <Box sx={{ width: '100%', padding: 2 }}>
-      <ImageList variant="masonry" cols={6} gap={20} sx={{ overflow: 'visible' }}>
+      <ImageList variant="masonry" cols={4} gap={16} sx={{ overflow: 'visible' }}>
         {itemData.map((item) => (
           <ImageListItem
             key={item.img}
@@ -32,7 +32,7 @@ export default function TitlebarBelowMasonryImageList() {
               loading="lazy"
               style={{
                 borderRadius: '8px', 
-                width: '150px', height: '200px', // Maintain aspect ratio
+                width: '100%', height: '200px', // Maintain aspect ratio
                 objectFit: 'cover', // Cover the area without stretching or distortion
               }}
             />
@@ -54,6 +54,29 @@ export default function TitlebarBelowMasonryImageList() {
 
 const itemData = [
   {
+    img: 'https://m.media-amazon.com/images/I/71wvIY18yEL._AC_UF1000,1000_QL80_.jpg',
+    title: 'Half a Soul',
+    author: 'Olivia Atwater'
+  },
+  {
+    img: 'https://m.media-amazon.com/images/I/91cRvRTmW0L._UF1000,1000_QL80_.jpg',
+    title: 'Zodiac Academy: Restless Stars',
+    author: 'Peckham & Valenti',
+    author2: 'Susanne Valenti',
+  },
+  {
+    img: 'https://m.media-amazon.com/images/I/811Hw216KZL._UF1000,1000_QL80_.jpg',
+    title: 'Zodiac Academy: Beyond the Veil',
+    author: 'Peckham & Valenti',
+    author2: 'Susanne Valenti',
+  },
+  {
+    img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1664442356i/59808792.jpg',
+    title: 'Zodiac Academy: Sorrow and Starlight',
+    author: 'Peckham & Valenti',
+    author2: 'Valenti',
+  },
+  {
     img: 'https://m.media-amazon.com/images/I/91+O6MTeBkL._UF1000,1000_QL80_.jpg',
     title: 'Blood & Steel',
     author: 'Helen B. Scheuerer',
@@ -73,45 +96,6 @@ const itemData = [
     title: 'Zodiac Academy 6: Fated Throne',
     author: 'Caroline Peckham',
     author2: 'Susanne Valenti',
-  },
-  {
-    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1684911482l/127280062._SX98_.jpg',
-    title: 'Ruthless Vows',
-    author: 'Rebecca Ross',
-  },
-  {
-    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1615486938l/55987278._SX98_.jpg',
-    title: 'Once Upon a Broken Heart',
-    author: 'Stephanie Garber',
-  },
-  {
-    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1659411218l/58340706._SX98_.jpg',
-    title: 'One Dark Window',
-    author: 'Rachel Gillig',
-  },
-  {
-    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1689809645l/52857700._SX98_.jpg',
-    title: 'House of Flame and Shadow',
-    author: 'Sarah J. Maas',
-  },
-  {
-    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1695345234l/199070596._SX98_.jpg',
-    title: 'Love Redesigned',
-    author: 'Lauren Asher',
-  },
-  {
-    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1593147576l/53968496._SX98_.jpg',
-    title: 'The Prison Healer',
-    author: 'Lynette Noni',
-  },
-  {
-    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1682369367l/136470356._SX98_.jpg',
-    title: 'Nocticadia',
-    author: 'Keri Lake',
-  },
-  {
-    img: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1618150545l/55710822._SX98_.jpg',
-    title: 'Better than the Movies',
-    author: 'Lynn Painter',
-  },
+  }
+  
 ];

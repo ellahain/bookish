@@ -5,12 +5,13 @@ import Home from "./Home"; // Import Home component
 import Navbar from "./components/Navbar"; // If you have a separate Navbar component
 import Reviews from "./Reviews";
 import BookReviewPage from "./BookReviewPage";
+import Careers from "./Careers";
 
 function App() {
   return (
     <Router>
       {/* Ensure the Router wraps the app */}
-      <Navbar />  {/*Your navigation bar */}
+      <Navbar/>  {/*Your navigation bar */}
       <Box
         sx={{
           display: "flex",
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/bookish/" element={<Home />} /> {/* Home route */}
           <Route path="/bookish/reviews" element={<Reviews />} />
+          <Route path="/bookish/careers" element={<Careers />} />
           <Route path="/bookish/reviews/:title" element={<BookReviewPage />} />
           {/*<Route path="/about" element={<About />} /> {/* Portfolio route */}
         </Routes>

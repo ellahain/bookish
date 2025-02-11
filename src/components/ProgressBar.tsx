@@ -1,9 +1,9 @@
 //import React from 'react';
-import banner from "/goodreadsbanner24.png";
+import banner from "/logo2025.png";
 
 export default function ProgressBar() {
-    const totalBooks = 45; // Total book goal
-    const booksRead = 33; // Update this value to reflect your progress
+    const totalBooks = 25; // Total book goal
+    const booksRead = 8; // Update this value to reflect your progress
     const progress = (booksRead / totalBooks) * 100; // Calculate progress percentage
   
     return (
@@ -23,8 +23,8 @@ export default function ProgressBar() {
           src={banner}
           alt="Goodreads Banner"
           style={{
-            width: '40vw', // Adjusted width of the banner
-            height: 'auto',
+            width: 'auto', // Adjusted width of the banner
+            height: '150px',
             marginBottom: '20px', // Adds space between the banner and progress bar
           }}
         />
@@ -41,7 +41,7 @@ export default function ProgressBar() {
             style={{
               height: '100%',
               width: `${progress}%`,
-              backgroundColor: 'black',
+              backgroundColor: '#d2928a',
               transition: 'width 0.3s ease',
             }}
           ></div>

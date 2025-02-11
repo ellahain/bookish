@@ -9,17 +9,19 @@ function Navbar() {
   useEffect(() => {
     const currentPath = location.pathname;
 
-    // Only set the value if it differs from the current state to avoid unnecessary re-renders
-    if (currentPath === "/bookish") {
-      if (value !== 0) {
-        setValue(0); // Home tab
-      }
+     // Determine the correct tab index based on the current path
+     if (currentPath === "/bookish/") {
+      setValue(0); // Home tab
+    } else if (currentPath === "/bookish/reviews") {
+      setValue(1); // Reviews tab
     } else if (currentPath.includes("/review")) {
-      if (value !== 1) {
-        setValue(1); // Reviews tab
-      }
+      setValue(1); // Reviews tab for individual reviews
+    } else if (currentPath === "/bookish/careers") {
+      setValue(2); // Careers tab
+    } else {
+      setValue(null); // Handle undefined paths if necessary
     }
-  }, [location, value]); // Run effect only when location or value changes
+  }, [location]); // Run effect only when location changes
 
   // If the value is not set yet (i.e., initial render), don't render the Tabs yet
   if (value === null) {
@@ -57,6 +59,17 @@ function Navbar() {
               },
             }}
           />
+          {/* <Tab
+            label="Careers"
+            component={Link}
+            to="/bookish/careers" // Link to the reviews page
+            sx={{
+              color: "white", // Normal text color
+              "&:hover": {
+                color: "#d2928a", // Hover text color
+              },
+            }}
+          /> */}
         </Tabs>
       </Toolbar>
     </AppBar>
