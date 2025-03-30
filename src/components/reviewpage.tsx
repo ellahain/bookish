@@ -54,6 +54,11 @@ export default function TitlebarBelowMasonryImageList() {
 
 const itemData = [
   {
+    img: 'https://tmm.chicagodistributioncenter.com/IsbnImages/9780226195186.jpg',
+    title: 'Personalities on the Plate',
+    author: 'Barbara J. King'
+  },
+  {
     img: 'https://m.media-amazon.com/images/I/71wvIY18yEL._AC_UF1000,1000_QL80_.jpg',
     title: 'Half a Soul',
     author: 'Olivia Atwater'
@@ -85,11 +90,6 @@ const itemData = [
     img: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1710664241i/204593914.jpg',
     title: 'Phantasma',
     author: 'Kaylie Smith',
-  },
-  {
-    img: 'https://m.media-amazon.com/images/I/91GUu7WQtdL.jpg',
-    title: 'Flawless',
-    author: 'Elsie Silver',
   },
   {
     img: 'https://m.media-amazon.com/images/I/91GaYe7NJAL._UF1000,1000_QL80_.jpg',

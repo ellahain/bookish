@@ -9,6 +9,7 @@ const reviews = {
   'Zodiac Academy: Beyond the Veil': lazy(() => import('./BookReviews/Zodiac Academy: Beyond the Veil')),
   'Zodiac Academy: Restless Stars': lazy(() => import('./BookReviews/Zodiac Academy: Restless Stars')),
   'Half a Soul': lazy(() => import('./BookReviews/Half a Soul')),
+  'Personalities on the Plate': lazy(() => import('./BookReviews/Personalities on the Plate')),
   //'Flawless': lazy(() => import('./Flawless')), // Create this component too
   // Add more reviews here as necessary
 };
